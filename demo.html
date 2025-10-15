@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head><meta charset="utf-8"><title>RequestBin</title></head>
+<body style="font-family: system-ui; margin: 2em;">
+  <h2>Demo RequestBin — Captura de User-Agent</h2>
+  <p>Este HTML hace una petición invisible a mi URL de RequestBin, que registrará el <code>User-Agent</code>.</p>
+  <p>Reemplaza la URL por la tuya antes de usar.</p>
+
+  <img src="https://webhook.site/tutokem" width="1" height="1" alt="ping"/>
+
+  <p>También puedes probar con fetch:</p>
+  <button id="btn">Enviar petición fetch</button>
+
+  <script>
+    document.getElementById('btn').addEventListener('click', async () => {
+      await fetch("https://webhook.site/tutoken", {cache: "no-store"});
+      alert("Petición enviada. Revisa webhook.site para ver las cabeceras.");
+    });
+  </script>
+</body>
+</html>
